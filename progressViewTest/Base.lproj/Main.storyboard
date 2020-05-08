@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hQ4-WH-4of">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="progressViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVp-vR-JZT">
+                                <rect key="frame" x="180" y="460" width="54" height="30"/>
+                                <state key="normal" title="Вперед"/>
+                                <connections>
+                                    <segue destination="q9I-Fv-T0L" kind="show" id="4vJ-mv-3QH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrE-1A-uzE">
+                                <rect key="frame" x="168.5" y="528" width="77" height="30"/>
+                                <state key="normal" title="Покрасить"/>
+                                <connections>
+                                    <action selector="paintBlock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="he6-WY-pSF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-7T-eR5">
+                                <rect key="frame" x="172" y="581" width="70" height="30"/>
+                                <state key="normal" title="Сбросить"/>
+                                <connections>
+                                    <action selector="discard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRD-oH-fVv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aEg-7T-eR5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Y1-ll-Wn9"/>
+                            <constraint firstItem="vrE-1A-uzE" firstAttribute="top" secondItem="LVp-vR-JZT" secondAttribute="bottom" constant="38" id="KAs-FR-Fx7"/>
+                            <constraint firstItem="LVp-vR-JZT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NBY-cY-UTh"/>
+                            <constraint firstItem="vrE-1A-uzE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lKZ-kV-tt8"/>
+                            <constraint firstItem="aEg-7T-eR5" firstAttribute="top" secondItem="vrE-1A-uzE" secondAttribute="bottom" constant="23" id="pc6-zR-obS"/>
+                            <constraint firstItem="LVp-vR-JZT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ubN-vc-sTT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dqa-Vf-yIb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Qok-zX-mEZ">
+            <objects>
+                <viewController id="q9I-Fv-T0L" customClass="SecondViewController" customModule="progressViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SUt-Nt-LJE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56V-ke-51w">
+                                <rect key="frame" x="97" y="460" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="backAction:" destination="q9I-Fv-T0L" eventType="touchUpInside" id="3Se-ZB-qf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es9-Hb-OLm">
+                                <rect key="frame" x="241" y="460" width="54" height="30"/>
+                                <state key="normal" title="Вперед"/>
+                                <connections>
+                                    <segue destination="thC-fQ-wGA" kind="show" id="0u9-hz-mi4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JWb-jl-AxF" firstAttribute="trailing" secondItem="Es9-Hb-OLm" secondAttribute="trailing" constant="119" id="0rZ-Vk-jMW"/>
+                            <constraint firstItem="Es9-Hb-OLm" firstAttribute="centerY" secondItem="JWb-jl-AxF" secondAttribute="centerY" id="Sfl-eN-Trv"/>
+                            <constraint firstItem="56V-ke-51w" firstAttribute="centerY" secondItem="JWb-jl-AxF" secondAttribute="centerY" id="kaM-o4-FjM"/>
+                            <constraint firstItem="56V-ke-51w" firstAttribute="leading" secondItem="JWb-jl-AxF" secondAttribute="leading" constant="97" id="vXx-EB-Fe1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JWb-jl-AxF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6JA-Ki-5T1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uo6-8F-rNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="151"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="due-Wb-qWJ">
+            <objects>
+                <viewController id="thC-fQ-wGA" customClass="ThirdViewController" customModule="progressViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XJA-hO-Jhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-oc-fHs">
+                                <rect key="frame" x="184.5" y="460" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="backAction:" destination="thC-fQ-wGA" eventType="touchUpInside" id="aEd-nt-fd7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KPe-oc-fHs" firstAttribute="centerY" secondItem="k4D-4k-gdf" secondAttribute="centerY" id="mYk-y2-tNi"/>
+                            <constraint firstItem="KPe-oc-fHs" firstAttribute="centerX" secondItem="k4D-4k-gdf" secondAttribute="centerX" id="wOf-HE-NdY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k4D-4k-gdf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pzv-hn-Eos"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6f-0m-HYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2739" y="159"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O6a-tp-joH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQ4-WH-4of" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vvM-TG-lfC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dt7-Co-Z82"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJa-xY-xMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
