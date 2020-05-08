@@ -12,22 +12,17 @@ final class ProgressView: UIView {
 
     // MARK: - Private Properties
 
-    private var numberOfBlocks = 4
-    private var currentBlock = 1
     private lazy var stackView = UIStackView()
 
     // MARK: - Internal Methods
 
-    func configure(numberOfBlocks: Int, currentBlock: Int) {
-        self.numberOfBlocks = numberOfBlocks
-        self.currentBlock = currentBlock
-        addBlocks()
-        paintBlocks()
+    func configure(numberOfBlocks: Int = 4, currentBlock: Int = 1) {
+        addBlocks(blocksCount: numberOfBlocks)
+        paintBlocks(currentBlock: currentBlock)
     }
 
     func changeCurrentBlock(to currentBlock: Int) {
-        self.currentBlock = currentBlock
-        paintBlocks()
+        paintBlocks(currentBlock: currentBlock)
     }
 
 }
@@ -53,11 +48,10 @@ private extension ProgressView {
         ])
     }
 
-    func addBlocks() {
+    func addBlocks(blocksCount: Int) {
         self.configureStackView()
-        for _ in 0..<numberOfBlocks {
+        for _ in 0..<blocksCount {
             let block = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 4))
-            block.backgroundColor = UIColor(red: 0.831, green: 0.835, blue: 0.835, alpha: 1)
             block.layer.cornerRadius = 2
             block.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -68,7 +62,7 @@ private extension ProgressView {
         }
     }
 
-    func paintBlocks() {
+    func paintBlocks(currentBlock: Int) {
         for (index, block) in stackView.arrangedSubviews.enumerated() {
             if index < currentBlock {
                 block.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
